@@ -19,5 +19,5 @@ class RoofMaterial(models.Model):
     def clean(self):
         if self.type in ['p', 'm'] and self.height_m is not None:
             raise ValidationError("Height should be null for 'profnastil' or 'metall' type.")
-        elif self.type == 's' and (self.height_m is None or self.height_m == 0):
+        elif self.type == 's' and (self.height_m is None or self.height_m == 0 or self.height_m < 0):
             raise ValidationError("Height should be provided and non-zero for 'shifer' type.")
