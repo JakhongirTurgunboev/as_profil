@@ -136,7 +136,7 @@ def calculate_roof_p(request):
         c_count = math.ceil(A / material.width_m) * c_side
         d_count = math.ceil((A - G) / material.width_m) * d_side
         e_count = math.ceil((A - G) / material.width_m) * e_side
-        f_count = math.ceil(A / material.width) * f_side
+        f_count = math.ceil(A / material.width_m) * f_side
         g_count = math.ceil(B / material.width_m) * g_side
         h_count = math.ceil((B - C - F) / material.width_m) * h_side
 
