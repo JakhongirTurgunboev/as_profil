@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Form - Part 2</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>2-Qadam: Materialni tanlang</h2>
+  <!-- Material Selection Form -->
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="materialSelection">Material tanlang</label>
+      <!-- Populate options from database data -->
+      <select class="form-control" id="materialSelection" name="materialSelection">
+        {% for roof in roofs %}
+          <option value="{{ roof.id }}">{{ roof.title }}</option>
+        {% endfor %}
+        <!-- Add options dynamically here from database -->
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Next</button>
+  </form>
+</div>
+
+</body>
+</html>

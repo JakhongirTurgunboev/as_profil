@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Form - Part 1</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>1-Qadam: Tomning material turini tanlang</h2>
+  <!-- Material Type Form -->
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="materialType">Material turi</label>
+      <select class="form-control" id="materialType" name="materialType">
+        <option value="p">Profnastil</option>
+        <option value="m">Metall</option>
+        <option value="s">Shifer</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Keyingisi</button>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    .custom-image {
+      width: auto;
+      max-height: auto; /* Adjusted maximum height */
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Custom Image -->
+      <img src="{% static 'img.png' %}" alt="Custom Image" class="custom-image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Material Type -->
+      <div class="form-group">
+        <label for="materialType">Material Type</label>
+        <select class="form-control" id="materialType">
+          <option value="p">P</option>
+          <option value="m">M</option>
+          <option value="s">S</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Material Selection -->
+      <div class="form-group">
+        <label for="materialSelection">Material Selection</label>
+        <input type="text" class="form-control" id="materialSelection" placeholder="Enter material...">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Fields A-H -->
+      <div class="form-group">
+        <label for="fieldA">Field A</label>
+        <input type="number" class="form-control" id="fieldA">
+      </div>
+      <div class="form-group">
+        <label for="fieldB">Field B</label>
+        <input type="number" class="form-control" id="fieldB">
+      </div>
+      <div class="form-group">
+        <label for="fieldC">Field C</label>
+        <input type="number" class="form-control" id="fieldC">
+      </div>
+      <div class="form-group">
+        <label for="fieldD">Field D</label>
+        <input type="number" class="form-control" id="fieldD">
+      </div>
+      <div class="form-group">
+        <label for="fieldE">Field E</label>
+        <input type="number" class="form-control" id="fieldE">
+      </div>
+      <div class="form-group">
+        <label for="fieldF">Field F</label>
+        <input type="number" class="form-control" id="fieldF">
+      </div>
+      <div class="form-group">
+        <label for="fieldG">Field G</label>
+        <input type="number" class="form-control" id="fieldG">
+      </div>
+      <div class="form-group">
+        <label for="fieldH">Field H</label>
+        <input type="number" class="form-control" id="fieldH">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

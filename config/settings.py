@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'rest_framework_simplejwt',
-    'roof'
+    'roof',
+    'ceiling',
+    'mvt'
 ]
 
 MIDDLEWARE = [
@@ -63,7 +65,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR) + '/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -162,6 +164,7 @@ class ViewPagination(PageNumberPagination):
     page_size = 10  # You can adjust this based on your preferences
     page_size_query_param = 'limit'
     max_page_size = 1000
+
 
 APPEND_SLASH = True
 

@@ -1,0 +1,69 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Form - Part 3</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add your custom CSS styles here */
+    .custom-image {
+      width: auto;
+      max-height: auto; /* Adjusted maximum height */
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Custom Image -->
+      <img src="{% static 'img.png' %}" alt="Custom Image" class="custom-image">
+    </div>
+  </div>
+  <h2>3-Qadam: Tomning tomonlarini kiriting: A-H</h2>
+  <!-- Data Insertion Form -->
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="fieldA">A tomoni</label>
+      <input type="number" class="form-control" id="fieldA" name="fieldA">
+    </div>
+    <div class="form-group">
+      <label for="fieldB">B tomoni</label>
+      <input type="number" class="form-control" id="fieldB" name="fieldB">
+    </div>
+    <div class="form-group">
+      <label for="fieldC">C tomoni</label>
+      <input type="number" class="form-control" id="fieldC" name="fieldC">
+    </div>
+    <div class="form-group">
+      <label for="fieldD">D tomoni</label>
+      <input type="number" class="form-control" id="fieldD" name="fieldD">
+    </div>
+    <div class="form-group">
+      <label for="fieldE">E tomoni</label>
+      <input type="number" class="form-control" id="fieldE" name="fieldE">
+    </div>
+    <div class="form-group">
+      <label for="fieldF">F tomoni</label>
+      <input type="number" class="form-control" id="fieldF" name="fieldF">
+    </div>
+    <div class="form-group">
+      <label for="fieldG">G tomoni</label>
+      <input type="number" class="form-control" id="fieldG" name="fieldG">
+    </div>
+    <div class="form-group">
+      <label for="fieldH">H tomoni</label>
+      <input type="number" class="form-control" id="fieldH" name="fieldH">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
