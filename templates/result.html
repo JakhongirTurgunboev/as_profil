@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful UI with Bootstrap</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+  <div class="container mt-5">
+    <div class="row">
+        <ul class="list-group col-md-6 offset-md-3">
+            <h2>Hisobot</h2>
+          <li class="list-group-item">Material nomi: {{ material_title }}</li>
+          <li class="list-group-item">Tomning turi: {{ material_type }}</li>
+          <li class="list-group-item">Mahsulot eni uzunligi: {{ material_width }} m</li>
+          <li class="list-group-item">Umumiy narxi: {{ overall_price }} so'm</li>
+        </ul>
+      <div class="col-md-6 offset-md-3 mt-1">
+        <h5>Detallar</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Soni</th>
+              <th scope="col">Bo'yi uzunligi</th>
+              <th scope="col">Narxi</th>
+            </tr>
+          </thead>
+          <tbody>
 
+            {% for side in sides %}
+            <tr>
+              <td>{{ side.quantity }}</td>
+              <td>{{ side.height_meter }} m</td>
+              <td>{{ side.price }} so'm</td>
+            </tr>
+            {% endfor %}
+            <!-- Additional rows can be added here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

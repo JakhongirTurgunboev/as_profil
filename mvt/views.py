@@ -119,15 +119,26 @@ def part3_view(request, material):
 
             overall_price = sum(x['price'] for x in sides)
 
+        material_type = ''
+        match material.type:
+            case 'p':
+                material_type = 'Profnastil'
+            case 's':
+                material_type = 'Shifer'
+            case 'm':
+                material_type = 'Metall'
+
+        overall_price = round(overall_price)
+
         response_data = {
             "material_title": material.title,
-            "material_type": material.type,
+            "material_type": material_type,
             "material_width": material.width_m,
             "sides": sides,
             "overall_price": overall_price,
         }
 
         # Return the response
-        return JsonResponse(response_data)
+        return render(request, 'result.html', context=response_data)
 
     return render(request, 'part3.html')
